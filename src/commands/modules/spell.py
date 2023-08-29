@@ -105,6 +105,7 @@ def init_map_pool() -> list:
 # Spell Rank
 def spell_rank(text: str) -> tuple:
     rank, tier = text[:-1], text[-1]
+    rank = rank.replace(' ', '').replace('　', '')
 
     if rank in IRON: 
         if tier in TIER_1: return INFO_IRON1
