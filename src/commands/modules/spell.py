@@ -55,6 +55,8 @@ BREEZE = ['BREEZE', 'Breeze', 'breeze', 'ぶりーず', 'ブリーズ', 'buri-zu
 FRACTURE = ['FRACTURE', 'Fracture', 'fracture', 'ふらくちゃー', 'フラクチャー', 'ふらくちゃ', 'フラクチャ', 'hurakutya-', 'hurakutya', 'furakutya-', 'furakutya', 'hurakucha-', 'hurakucha', 'furakucha-', 'furakucha']
 PEARL = ['PEARL', 'Pearl', 'pearl', 'PERL', 'Perl', 'perl', 'ぱーる', 'パール', 'パーる', 'pa-ru', 'paru']
 LOTUS = ['LOTUS', 'Lotus', 'lotus', 'ROTUS', 'Rotus', 'rotus', 'LOTAS', 'Lotas', 'lotas', 'ROTAS', 'Rotas', 'rotas', 'ロータス', 'ろーたす', 'ro-tasu', 'rotasu', 'lo-tasu', 'lotasu']
+SUNSET = ['SUNSET', 'Sunset', 'sunset', 'SANSET', 'Sanset', 'sanset', 'サンセット', 'さんせっと', 'sansetto']
+
 
 # List View Icon - Image
 LVI_ASCENT = 'https://cdn.discordapp.com/attachments/894129808563404801/894129849353011210/ascent.png'
@@ -66,6 +68,7 @@ LVI_BREEZE = 'https://cdn.discordapp.com/attachments/894129808563404801/89413020
 LVI_FRACTURE = 'https://cdn.discordapp.com/attachments/894129808563404801/894130220104294400/fracture.png'
 LVI_PEARL = 'https://cdn.discordapp.com/attachments/894129808563404801/989447194530693130/pearl.png'
 LVI_LOTUS = 'https://cdn.discordapp.com/attachments/894129808563404801/1064137344158023690/lotus.png'
+LVI_SUNSET = 'https://cdn.discordapp.com/attachments/894129808563404801/1146189922189971577/sunset.png'
 
 
 # Display Icon - Thumbnail
@@ -78,7 +81,7 @@ DI_BREEZE = 'https://cdn.discordapp.com/attachments/894130528536645632/894133050
 DI_FRACTURE = 'https://cdn.discordapp.com/attachments/894130528536645632/894133080833544202/fracture.png'
 DI_PEARL = 'https://cdn.discordapp.com/attachments/894130528536645632/989447260284780584/pearl.png'
 DI_LOTUS = 'https://cdn.discordapp.com/attachments/894130528536645632/1064136626273534032/lotus.png'
-
+DI_SUNSET = 'https://cdn.discordapp.com/attachments/894130528536645632/1146189842934403192/sunset.png'
 
 # Map Info
 INFO_ASCENT = ('アセント', LVI_ASCENT, DI_ASCENT)
@@ -90,12 +93,13 @@ INFO_BREEZE = ('ブリーズ', LVI_BREEZE, DI_BREEZE)
 INFO_FRACTURE = ('フラクチャー', LVI_FRACTURE, DI_FRACTURE)
 INFO_PEARL = ('パール', LVI_PEARL, DI_PEARL)
 INFO_LOTUS = ('ロータス', LVI_LOTUS, DI_LOTUS)
+INFO_SUNSET = ('サンセット', LVI_SUNSET, DI_SUNSET)
 INFO_NO_MAP = ('該当なし', LVI_ASCENT, DI_ASCENT)
 
 
 # Map Pool
 def init_map_pool() -> list:
-    return ['アセント', 'スプリット', 'ヘイヴン', 'バインド', 'アイスボックス', 'ブリーズ', 'フラクチャー', 'パール', 'ロータス']
+    return ['アセント', 'スプリット', 'ヘイヴン', 'バインド', 'アイスボックス', 'ブリーズ', 'フラクチャー', 'パール', 'ロータス', サンセット]
 
 
 # Spell Rank
@@ -158,4 +162,5 @@ def spell_map(text: str) -> tuple:
     elif text in FRACTURE: return INFO_FRACTURE
     elif text in PEARL: return INFO_PEARL
     elif text in LOTUS: return INFO_LOTUS
+    elif text in SUNSET: return INFO_SUNSET
     else: return INFO_NO_MAP
