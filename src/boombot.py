@@ -23,7 +23,8 @@ class BoomBot(commands.AutoShardedBot):
         await bot.tree.sync(guild=Object(id=HOME))
 
     async def on_ready(self):
-        await self.change_presence(activity=Game(name="Valorant Season 6に対応しました。"))
+        pass
+        # await self.change_presence(activity=Game(name="Valorant Season 7に対応しました。"))
 
 
 if __name__ == '__main__':
