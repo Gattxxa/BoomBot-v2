@@ -1,5 +1,5 @@
-# BoomBot
-VERSION = 'BoomBot - Version2.0'
+# Boom Bot
+VERSION = 'Boom Bot - Version2.1'
 OFFICIA_URL = 'https://gattxxa.github.io/boombot/'
 
 
@@ -14,7 +14,7 @@ BOOMBOT = 0xffb500
 
 
 # Description
-DESC_VALO = 'BoomBot\'s slash commands.'
+DESC_VALO = 'Boom Bot\'s slash commands.'
 DESC_HELP = 'Botに関する情報を表示します'
 DESC_RANK = 'ランクの表示・更新を行います'
 DESC_RANK_ARG = 'あなたのランク（更新する場合のみ）'
@@ -25,7 +25,7 @@ DESC_RANDOM = '完全ランダムなチーム分けを行います'
 DESC_RANDOM_ARG = '除外したいユーザーのIgnoreID（空白区切り）'
 DESC_MAP = 'ランダムなマップ抽選を行います'
 DESC_MAP_ARG = '除外したいマップ名（空白区切り）'
-DESC_STAT = 'BoomBotの統計表示を行います'
+DESC_STAT = 'Boom Botの統計表示を行います'
 
 
 # Map

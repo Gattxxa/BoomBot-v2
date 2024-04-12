@@ -6,6 +6,7 @@ from .modules.player import get_players
 
 # /valo list
 def valo_list(ctx):
+    embeds = []
 
     # Error: Not in a voice channel.
     try:
@@ -13,7 +14,8 @@ def valo_list(ctx):
         players = get_players(channel)
     except AttributeError:
         embed = Embed(title=LIST_TTL_ERR, color=ERROR)
-        return embed
+        embeds.append(embed)
+        return embeds
 
     # Success: List view
     if players:
@@ -21,13 +23,21 @@ def valo_list(ctx):
         for i in range(num):
             player = players[i]
             value += f'{i} - {player.emoji}<@{player.id}>\n'
-        embed = Embed(title=f'メンバーの詳細情報　({num}/10人)', color=SUCCESS)
-        embed.add_field(name='IgnoreID', value=value)
-        embed.set_footer(text=LIST_FOOT_SUC)
-        return embed
+        
+            if ((i+1)%10) == 0 or (i+1) == num:
+                embed = Embed(title=f'メンバーの詳細情報　({num}/10)', color=SUCCESS)
+                embed.add_field(name='IgnoreID', value=value)
+                if (i+1) == num:
+                    embed.set_footer(text=LIST_FOOT_SUC)
+                embeds.append(embed)
+                value = ''
+
+        return embeds
 
     # Warn: After rebooting the bot.
     else:
         embed = Embed(title=LIST_TTL_WAR, color=WARNING)
         embed.set_footer(text=LIST_FOOT_WAR)
-        return embed
+        embeds.append(embed)
+
+        return embeds

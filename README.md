@@ -1,8 +1,8 @@
-# BoomBot-v2
+# Boom Bot-v2
 [![](https://img.shields.io/badge/Python-3.10.x-informational?logo=python&logoColor=1da1f2)](https://www.python.org/) [![](https://img.shields.io/badge/discord.py-v2.0.0α_or_higher-informational?logo=python&logoColor=1da1f2)](https://www.python.org/)  
-Discord API v10 に 対応させた [BoomBot](https://twitter.com/GattxxaGame/status/1421664481114001411?s=20&t=cGi70np_P6eKXdBgXd7EPg) の新バージョン。  
+Discord API v10 に 対応させた [Boom Bot](https://twitter.com/GattxxaGame/status/1421664481114001411?s=20&t=cGi70np_P6eKXdBgXd7EPg) の新バージョン。  
 スラッシュコマンドによって操作する形に変更されました。  
-[BoomBot公式WEBページ](https://gattxxa.github.io/boombot/)  
+[Boom Bot公式WEBページ](https://gattxxa.github.io/boombot/)  
   
 ## 📚 How to install discord.py v2.0.0α
 ```

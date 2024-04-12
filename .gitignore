@@ -129,10 +129,10 @@ dmypy.json
 .pyre/
 
 
-# BoomBot
+# Boom Bot
 env.py
 
-# BoomBotDB
+# Boom Bot DB
 BoomBot.db
 src/tools/import/
 db_setup.py

@@ -40,8 +40,8 @@ class GlobalValo(commands.Cog):
     # /valo list
     @valo.command(name='list', description=DESC_LIST)
     async def slash_valo_list(self, ctx):
-        embed = valo_list(ctx)
-        await ctx.response.send_message(embed=embed)
+        embeds = valo_list(ctx)
+        await ctx.response.send_message(embeds=embeds)
         
 
     # /valo team ignore:
